@@ -1,0 +1,22 @@
+Standard Form
+45.929100, 170.512000 Dunedin
+
+Standard form except for the number of decimal points given differs from 6.
+50.0755, 14.4378 Prague
+
+Standard form except the comma is missing
+-33.8688 151.2093 Sydney
+
+Standard form, except the numbers are non-negative and followed by N or S 
+(for latitude) and E or W (for longitude), possibly in the wrong order.
+37.6173 E, 55.7558 N Moscow, Russia
+
+“Degrees, minutes, seconds” form 
+51°28'40.4"N 0°10'26.3"W London
+
+“Degrees, minutes, seconds” form without decimal places on the seconds,
+and with or without the standard markers for degrees, minutes and seconds.
+51 28 40 N 0 10 56 W
+
+Degrees and decimal minutes form.
+55.7558° N, 37.6173° E, Moscow, Russia

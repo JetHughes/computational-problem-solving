@@ -1,0 +1,88 @@
+{
+  "subjects_dict":{
+    "i": "au",
+    "he": "ia",
+    "she": "ia",
+    "you (1 incl)": "koe",
+    "you (2 incl)": "kōrua",
+    "you (3 incl)": "koutou",
+    "we (2 incl)": "tāua",
+    "we (2 excl)": "māua",
+    "we (3 incl)": "tātou",
+    "we (3 excl)": "mātou",
+    "they (2 excl)": "rāua",
+    "they (3 excl)": "rātou"
+  },
+  "subject_words": ["i", "you", "he", "she", "we", "they", "them"],
+  "subjects_māori":["au", "ia", "ia", "koe", "kōrua", "koutou", "tāua", "māua", "tātou", "mātou", "rāua", "rātou"],
+  "subjects_english":[ "I", "He", "She", "You (1 incl)", "You (2 incl)", "You (3 incl)", "We (2 incl)", "We (2 excl)", "We (3 incl)", "We (3 excl)", "They (2 excl)", "They (3 excl)"],
+  "subject_present_progressive_participles_dict": {
+    "I":["am"], 
+    "He":["is"], 
+    "She":["is"], 
+    "You (1 incl)":["are"], 
+    "You (2 incl)":["are"], 
+    "You (3 incl)":["are"], 
+    "We (2 incl)":["are"], 
+    "We (2 excl)":["are"], 
+    "We (3 incl)":["are"], 
+    "We (3 excl)":["are"], 
+    "They (2 excl)":["are"], 
+    "They (3 excl)":["are"]
+  },
+  "verbs": [
+    {
+      "english_future":"will go", 
+      "english_present":"going",
+      "english_past":"went",
+      "māori": "haere"
+    },    
+    {
+      "english_future":"will make",
+      "english_present":"making",
+      "english_past":"made",
+      "māori":"hanga"
+    }, 
+    {
+      "english_future":"will see",
+      "english_present":"seeing",
+      "english_past":"saw",
+      "māori":"kite"
+    }, 
+    {
+      "english_future":"will want",
+      "english_present":"wanting",
+      "english_past":"wanted",
+      "māori":"hiahia"
+    }, 
+    {
+      "english_future":"will call",
+      "english_present":"calling",
+      "english_past":"called",
+      "māori":"karanga"
+    }, 
+    {
+      "english_future":"will ask",
+      "english_present":"asking",
+      "english_past":"asked",
+      "māori":"pātai"
+    }, 
+    {
+      "english_future":"will read",
+      "english_present":"reading",
+      "english_past":"read",
+      "māori":"pānui"
+    }, 
+    {
+      "english_future":"will learn",
+      "english_present":"learning",
+      "english_past":"learned",
+      "māori":"ako"
+    }
+  ],
+  "starters": {
+    "past": "I", 
+    "present":"Kei te", 
+    "future":"Ka"
+  }
+}

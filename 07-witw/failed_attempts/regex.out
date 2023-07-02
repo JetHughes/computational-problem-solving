@@ -1,0 +1,64 @@
+1. Standard form: 
+
+Regex: ^\s*(-?\d{1,2}\.\d{6}),\s*(-?\d{1,3}\.\d{6})\s*(.*)$
+
+Explanation: 
+- ^: match the start of the line
+- \s*: match any leading white space
+- (-?\d{1,2}\.\d{6}): match a latitude or longitude in standard form, with optional negative sign and exactly 6 decimal places
+- ,: match the comma separating the latitude and longitude
+- \s*: match any trailing white space
+- (-?\d{1,3}\.\d{6}): match the longitude or latitude in standard form, with optional negative sign and exactly 6 decimal places
+- \s*(.*): match any remaining text on the line as a label
+
+
+2. Standard form except for number of decimal points differs from 6:
+
+Regex: ^\s*(-?\d{1,2}\.\d{1,5}),\s*(-?\d{1,3}\.\d{1,4})\s*(.*)$
+
+Explanation: 
+- same as above, except:
+- \d{1,5}: matches between 1 and 5 decimal places (instead of 6) for latitude
+- \d{1,4}: matches between 1 and 4 decimal places (instead of 6) for longitude
+
+
+3. Standard form except the comma is missing:
+
+Regex: ^\s*(-?\d{1,2}\.\d{6})\s*(-?\d{1,3}\.\d{6})\s*(.*)$
+
+Explanation: 
+- same as case 1, except:
+- removed the comma between latitude and longitude
+
+
+4. Standard form, except the numbers are non-negative and followed by N or S (for latitude) and E or W (for longitude), possibly in the wrong order:
+
+Regex: ^\s*(-?\d{1,2}\.\d{1,6})([NS])?\s*(-?\d{1,3}\.\d{1,6})([EW])?\s*(.*)$
+
+Explanation: 
+- same as case 1, except: 
+- ([NS])?: optional match for N or S immediately following the latitude (allowing for non-negative input)
+- ([EW])?: optional match for E or W immediately following the longitude (allowing for non-negative input)
+
+
+5. "Degrees, minutes, seconds" form with or without decimal places on the seconds, and with or without the standard markers for degrees, minutes and seconds:
+
+Regex: ^\s*(-?\d{1,3})┬░?\s*(-?\d{1,2})'?\s*(-?\d{1,2}(?:\.\d+)?)?"?\s*([NS])?\s*(-?\d{1,3})┬░?\s*(-?\d{1,2})'?\s*(-?\d{1,2}(?:\.\d+)?)?"?\s*([EW])?\s*(.*)$
+
+Explanation:
+- \d{1,3}┬░?: matches degrees with optional degree symbol
+- \d{1,2}'?: matches minutes with optional apostrophe symbol
+- \d{1,2}(?:\.\d+)?"?: matches seconds with optional decimal places and double quote symbol
+- ([NS])?: optional match for N or S immediately following the latitude
+- ([EW])?: optional match for E or W immediately following the longitude
+- (.*): captures any remaining text as a label
+
+
+6. Degrees and decimal minutes form:
+
+Regex: ^\s*(-?\d{2,3})\.(?\d{0,10})([NS])?\s*(-?\d{2,3})\.(?\d{0,10})([EW])?\s*(.*)$
+
+Explanation: 
+- same as case 4 except:
+- \d{2,3}\.?\d{0,10}: matches degrees with optional decimal places (decimal minutes)
+- removed the degree, minute, and second markers from the regex

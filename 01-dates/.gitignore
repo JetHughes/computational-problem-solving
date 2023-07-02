@@ -1,0 +1,13 @@
+# Exclude virtual env folder
+dates/
+
+# Exclude vscode folder
+.vscode/
+
+# Testing output files
+*.out
+
+# Other
+__pycache__/
+.env
+test.py

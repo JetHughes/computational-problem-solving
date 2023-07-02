@@ -1,0 +1,288 @@
+I went, I haere au
+I am going, Kei te haere au
+I will go, Ka haere au
+I made, I hanga au
+I am making, Kei te hanga au
+I will make, Ka hanga au
+I saw, I kite au
+I am seeing, Kei te kite au
+I will see, Ka kite au
+I wanted, I hiahia au
+I am wanting, Kei te hiahia au
+I will want, Ka hiahia au
+I called, I karanga au
+I am calling, Kei te karanga au
+I will call, Ka karanga au
+I asked, I pātai au
+I am asking, Kei te pātai au
+I will ask, Ka pātai au
+I read, I pānui au
+I am reading, Kei te pānui au
+I will read, Ka pānui au
+I learned, I ako au
+I am learning, Kei te ako au
+I will learn, Ka ako au
+He went, I haere ia
+He is going, Kei te haere ia
+He will go, Ka haere ia
+He made, I hanga ia
+He is making, Kei te hanga ia
+He will make, Ka hanga ia
+He saw, I kite ia
+He is seeing, Kei te kite ia
+He will see, Ka kite ia
+He wanted, I hiahia ia
+He is wanting, Kei te hiahia ia
+He will want, Ka hiahia ia
+He called, I karanga ia
+He is calling, Kei te karanga ia
+He will call, Ka karanga ia
+He asked, I pātai ia
+He is asking, Kei te pātai ia
+He will ask, Ka pātai ia
+He read, I pānui ia
+He is reading, Kei te pānui ia
+He will read, Ka pānui ia
+He learned, I ako ia
+He is learning, Kei te ako ia
+He will learn, Ka ako ia
+She went, I haere ia
+She is going, Kei te haere ia
+She will go, Ka haere ia
+She made, I hanga ia
+She is making, Kei te hanga ia
+She will make, Ka hanga ia
+She saw, I kite ia
+She is seeing, Kei te kite ia
+She will see, Ka kite ia
+She wanted, I hiahia ia
+She is wanting, Kei te hiahia ia
+She will want, Ka hiahia ia
+She called, I karanga ia
+She is calling, Kei te karanga ia
+She will call, Ka karanga ia
+She asked, I pātai ia
+She is asking, Kei te pātai ia
+She will ask, Ka pātai ia
+She read, I pānui ia
+She is reading, Kei te pānui ia
+She will read, Ka pānui ia
+She learned, I ako ia
+She is learning, Kei te ako ia
+She will learn, Ka ako ia
+You (1 incl) went, I haere koe
+You (1 incl) are going, Kei te haere koe
+You (1 incl) will go, Ka haere koe
+You (1 incl) made, I hanga koe
+You (1 incl) are making, Kei te hanga koe
+You (1 incl) will make, Ka hanga koe
+You (1 incl) saw, I kite koe
+You (1 incl) are seeing, Kei te kite koe
+You (1 incl) will see, Ka kite koe
+You (1 incl) wanted, I hiahia koe
+You (1 incl) are wanting, Kei te hiahia koe
+You (1 incl) will want, Ka hiahia koe
+You (1 incl) called, I karanga koe
+You (1 incl) are calling, Kei te karanga koe
+You (1 incl) will call, Ka karanga koe
+You (1 incl) asked, I pātai koe
+You (1 incl) are asking, Kei te pātai koe
+You (1 incl) will ask, Ka pātai koe
+You (1 incl) read, I pānui koe
+You (1 incl) are reading, Kei te pānui koe
+You (1 incl) will read, Ka pānui koe
+You (1 incl) learned, I ako koe
+You (1 incl) are learning, Kei te ako koe
+You (1 incl) will learn, Ka ako koe
+You (2 incl) went, I haere kōrua
+You (2 incl) are going, Kei te haere kōrua
+You (2 incl) will go, Ka haere kōrua
+You (2 incl) made, I hanga kōrua
+You (2 incl) are making, Kei te hanga kōrua
+You (2 incl) will make, Ka hanga kōrua
+You (2 incl) saw, I kite kōrua
+You (2 incl) are seeing, Kei te kite kōrua
+You (2 incl) will see, Ka kite kōrua
+You (2 incl) wanted, I hiahia kōrua
+You (2 incl) are wanting, Kei te hiahia kōrua
+You (2 incl) will want, Ka hiahia kōrua
+You (2 incl) called, I karanga kōrua
+You (2 incl) are calling, Kei te karanga kōrua
+You (2 incl) will call, Ka karanga kōrua
+You (2 incl) asked, I pātai kōrua
+You (2 incl) are asking, Kei te pātai kōrua
+You (2 incl) will ask, Ka pātai kōrua
+You (2 incl) read, I pānui kōrua
+You (2 incl) are reading, Kei te pānui kōrua
+You (2 incl) will read, Ka pānui kōrua
+You (2 incl) learned, I ako kōrua
+You (2 incl) are learning, Kei te ako kōrua
+You (2 incl) will learn, Ka ako kōrua
+You (3 incl) went, I haere koutou
+You (3 incl) are going, Kei te haere koutou
+You (3 incl) will go, Ka haere koutou
+You (3 incl) made, I hanga koutou
+You (3 incl) are making, Kei te hanga koutou
+You (3 incl) will make, Ka hanga koutou
+You (3 incl) saw, I kite koutou
+You (3 incl) are seeing, Kei te kite koutou
+You (3 incl) will see, Ka kite koutou
+You (3 incl) wanted, I hiahia koutou
+You (3 incl) are wanting, Kei te hiahia koutou
+You (3 incl) will want, Ka hiahia koutou
+You (3 incl) called, I karanga koutou
+You (3 incl) are calling, Kei te karanga koutou
+You (3 incl) will call, Ka karanga koutou
+You (3 incl) asked, I pātai koutou
+You (3 incl) are asking, Kei te pātai koutou
+You (3 incl) will ask, Ka pātai koutou
+You (3 incl) read, I pānui koutou
+You (3 incl) are reading, Kei te pānui koutou
+You (3 incl) will read, Ka pānui koutou
+You (3 incl) learned, I ako koutou
+You (3 incl) are learning, Kei te ako koutou
+You (3 incl) will learn, Ka ako koutou
+We (2 incl) went, I haere tāua
+We (2 incl) are going, Kei te haere tāua
+We (2 incl) will go, Ka haere tāua
+We (2 incl) made, I hanga tāua
+We (2 incl) are making, Kei te hanga tāua
+We (2 incl) will make, Ka hanga tāua
+We (2 incl) saw, I kite tāua
+We (2 incl) are seeing, Kei te kite tāua
+We (2 incl) will see, Ka kite tāua
+We (2 incl) wanted, I hiahia tāua
+We (2 incl) are wanting, Kei te hiahia tāua
+We (2 incl) will want, Ka hiahia tāua
+We (2 incl) called, I karanga tāua
+We (2 incl) are calling, Kei te karanga tāua
+We (2 incl) will call, Ka karanga tāua
+We (2 incl) asked, I pātai tāua
+We (2 incl) are asking, Kei te pātai tāua
+We (2 incl) will ask, Ka pātai tāua
+We (2 incl) read, I pānui tāua
+We (2 incl) are reading, Kei te pānui tāua
+We (2 incl) will read, Ka pānui tāua
+We (2 incl) learned, I ako tāua
+We (2 incl) are learning, Kei te ako tāua
+We (2 incl) will learn, Ka ako tāua
+We (2 excl) went, I haere māua
+We (2 excl) are going, Kei te haere māua
+We (2 excl) will go, Ka haere māua
+We (2 excl) made, I hanga māua
+We (2 excl) are making, Kei te hanga māua
+We (2 excl) will make, Ka hanga māua
+We (2 excl) saw, I kite māua
+We (2 excl) are seeing, Kei te kite māua
+We (2 excl) will see, Ka kite māua
+We (2 excl) wanted, I hiahia māua
+We (2 excl) are wanting, Kei te hiahia māua
+We (2 excl) will want, Ka hiahia māua
+We (2 excl) called, I karanga māua
+We (2 excl) are calling, Kei te karanga māua
+We (2 excl) will call, Ka karanga māua
+We (2 excl) asked, I pātai māua
+We (2 excl) are asking, Kei te pātai māua
+We (2 excl) will ask, Ka pātai māua
+We (2 excl) read, I pānui māua
+We (2 excl) are reading, Kei te pānui māua
+We (2 excl) will read, Ka pānui māua
+We (2 excl) learned, I ako māua
+We (2 excl) are learning, Kei te ako māua
+We (2 excl) will learn, Ka ako māua
+We (3 incl) went, I haere tātou
+We (3 incl) are going, Kei te haere tātou
+We (3 incl) will go, Ka haere tātou
+We (3 incl) made, I hanga tātou
+We (3 incl) are making, Kei te hanga tātou
+We (3 incl) will make, Ka hanga tātou
+We (3 incl) saw, I kite tātou
+We (3 incl) are seeing, Kei te kite tātou
+We (3 incl) will see, Ka kite tātou
+We (3 incl) wanted, I hiahia tātou
+We (3 incl) are wanting, Kei te hiahia tātou
+We (3 incl) will want, Ka hiahia tātou
+We (3 incl) called, I karanga tātou
+We (3 incl) are calling, Kei te karanga tātou
+We (3 incl) will call, Ka karanga tātou
+We (3 incl) asked, I pātai tātou
+We (3 incl) are asking, Kei te pātai tātou
+We (3 incl) will ask, Ka pātai tātou
+We (3 incl) read, I pānui tātou
+We (3 incl) are reading, Kei te pānui tātou
+We (3 incl) will read, Ka pānui tātou
+We (3 incl) learned, I ako tātou
+We (3 incl) are learning, Kei te ako tātou
+We (3 incl) will learn, Ka ako tātou
+We (3 excl) went, I haere mātou
+We (3 excl) are going, Kei te haere mātou
+We (3 excl) will go, Ka haere mātou
+We (3 excl) made, I hanga mātou
+We (3 excl) are making, Kei te hanga mātou
+We (3 excl) will make, Ka hanga mātou
+We (3 excl) saw, I kite mātou
+We (3 excl) are seeing, Kei te kite mātou
+We (3 excl) will see, Ka kite mātou
+We (3 excl) wanted, I hiahia mātou
+We (3 excl) are wanting, Kei te hiahia mātou
+We (3 excl) will want, Ka hiahia mātou
+We (3 excl) called, I karanga mātou
+We (3 excl) are calling, Kei te karanga mātou
+We (3 excl) will call, Ka karanga mātou
+We (3 excl) asked, I pātai mātou
+We (3 excl) are asking, Kei te pātai mātou
+We (3 excl) will ask, Ka pātai mātou
+We (3 excl) read, I pānui mātou
+We (3 excl) are reading, Kei te pānui mātou
+We (3 excl) will read, Ka pānui mātou
+We (3 excl) learned, I ako mātou
+We (3 excl) are learning, Kei te ako mātou
+We (3 excl) will learn, Ka ako mātou
+They (2 excl) went, I haere rāua
+They (2 excl) are going, Kei te haere rāua
+They (2 excl) will go, Ka haere rāua
+They (2 excl) made, I hanga rāua
+They (2 excl) are making, Kei te hanga rāua
+They (2 excl) will make, Ka hanga rāua
+They (2 excl) saw, I kite rāua
+They (2 excl) are seeing, Kei te kite rāua
+They (2 excl) will see, Ka kite rāua
+They (2 excl) wanted, I hiahia rāua
+They (2 excl) are wanting, Kei te hiahia rāua
+They (2 excl) will want, Ka hiahia rāua
+They (2 excl) called, I karanga rāua
+They (2 excl) are calling, Kei te karanga rāua
+They (2 excl) will call, Ka karanga rāua
+They (2 excl) asked, I pātai rāua
+They (2 excl) are asking, Kei te pātai rāua
+They (2 excl) will ask, Ka pātai rāua
+They (2 excl) read, I pānui rāua
+They (2 excl) are reading, Kei te pānui rāua
+They (2 excl) will read, Ka pānui rāua
+They (2 excl) learned, I ako rāua
+They (2 excl) are learning, Kei te ako rāua
+They (2 excl) will learn, Ka ako rāua
+They (3 excl) went, I haere rātou
+They (3 excl) are going, Kei te haere rātou
+They (3 excl) will go, Ka haere rātou
+They (3 excl) made, I hanga rātou
+They (3 excl) are making, Kei te hanga rātou
+They (3 excl) will make, Ka hanga rātou
+They (3 excl) saw, I kite rātou
+They (3 excl) are seeing, Kei te kite rātou
+They (3 excl) will see, Ka kite rātou
+They (3 excl) wanted, I hiahia rātou
+They (3 excl) are wanting, Kei te hiahia rātou
+They (3 excl) will want, Ka hiahia rātou
+They (3 excl) called, I karanga rātou
+They (3 excl) are calling, Kei te karanga rātou
+They (3 excl) will call, Ka karanga rātou
+They (3 excl) asked, I pātai rātou
+They (3 excl) are asking, Kei te pātai rātou
+They (3 excl) will ask, Ka pātai rātou
+They (3 excl) read, I pānui rātou
+They (3 excl) are reading, Kei te pānui rātou
+They (3 excl) will read, Ka pānui rātou
+They (3 excl) learned, I ako rātou
+They (3 excl) are learning, Kei te ako rātou
+They (3 excl) will learn, Ka ako rātou

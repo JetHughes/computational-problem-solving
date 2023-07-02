@@ -1,0 +1,6 @@
+.vscode/
+archive/
+graphs/
+output_results/
+notes.txt
+droppingCars.py
