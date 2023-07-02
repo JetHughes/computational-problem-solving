@@ -1,4 +1,17 @@
+"""A small script used to generate valid test cases for date_parser.py
+
+Uses sys to write data to a file. Creates a list of dates in various 
+valid formats. Writes to stdout
+  
+Example Usage: 
+  python date_generator.py > test_data/valid_dates.in
+  
+"""
+
 import sys
+
+SEPARATORS = {"/", "-", " "}
+MONTHS = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
 
 # Function to check if a year is a leap year
 def is_leap_year(year):
@@ -8,8 +21,6 @@ def is_leap_year(year):
   return False
 
 # Generates all valid test cases for dateChecker.py
-SEPARATORS = {"/", "-", " "}
-MONTHS = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
 def gen_valid():
   # for every valid date i.e., each day, month, and year
     for day_num in range(1, 32):
