@@ -2,7 +2,6 @@
 
 Bash:
 ```
-git clone https://github.com/JetHughes/03-snowflakes.git
 cd 03-snowflakes
 mkdir build
 cd build
