@@ -11,3 +11,4 @@ dates/
 __pycache__/
 .env
 test.py
+test_data/downloaded/
