@@ -1,4 +1,5 @@
 import math
+import numpy as np
 
 def checkIntervals(a):
     for i in range(2,len(a)):
@@ -6,14 +7,14 @@ def checkIntervals(a):
             print(str(a[i-1]) + " to " + str(a[i]) + " FAIL!")
 
 def f(j):
-    return 1/j  #THIS is the function we want to change to change distributions
+    return 1/math.pow(j,3)  #THIS is the function we want to change to change distributions
 
 def eNum(k):
     exponent = 0
-    for j in range(1,n+1):
+    for j in range(1,k+1):
         exponent += f(j)
     
-    return math.pow(math.e, exponent)   #return ln(math.e) to get rid of the e and just return the exponent (for testing out non exponential trends)
+    return math.log(math.pow(math.e, exponent), math.e)   #return ln(math.e) to get rid of the e and just return the exponent (for testing out non exponential trends)
 
 def eTerm(n):
     result = 1
@@ -83,7 +84,7 @@ def calcExpenditure5(a):
 
         #if the distance between the points is greater than half of the fuel tank, we can't make it, so return FAIL
         if(distance*2 > 140):
-            return "FAIL"
+            return 100000000
 
         if j == n-1:  #first case for the last drop
             required = 2*distance
@@ -99,16 +100,24 @@ def calcExpenditure5(a):
         tripArray.append(thisTrip)
         tripcost.append(thisTrip*2*distance + required)
 
-
     #print for debugging
     print(reqArray) 
     print(tripArray)
     print(tripcost)
 
-    return sum(tripcost)
+    return (sum(tripcost) + 140)
 
 
-
+def evenDist(d, c, m):
+    last = (d - (1/2)*m*c)/m
+    current = last - c/4
+    a = [last]
+    while(current > 0):
+        a.append(current)
+        current = current - c/4
+    a.append(0)
+    a = list(reversed(a))
+    return a
 
 
 def main():
@@ -116,24 +125,26 @@ def main():
     m = 12      #vehicle mileage
     c = 140     #vehicle fuel capacity
 
-    thresh = c/3 #maybe better as c/3, or maybe better as c/2. Trying to find
-    print("threshold: " + str(thresh))
+
+    minCosts = []
 
     for n in range(1,10):
-        lastDrop = (d-(1/1)*m*c)/m  #half of full tank for the return journey, a full tank for the one way
-
+        lastDrop = (d-(1/2)*m*c)/m  #half of full tank for the return journey, a full tank for the one way
         a1 = lastDrop/(eTerm(n))
         maxInterval = eNum(n)*a1
-        print(str(n) + ": minInterval: " + str(a1) + ", maxInterval: " + str(maxInterval))
-
-        a = [0, a1]
-        for k in range(2, n+2):
-            a.append(a[k-1] + a1*eNum(k-1))
-
+        #print(str(n) + ": minInterval: " + str(a1) + ", maxInterval: " + str(maxInterval))
+        #a = [0, a1]
+        #for k in range(2, n+2):
+        #    a.append(a[k-1] + a1*eNum(k-1))
+        a = evenDist(d,c,m)
+        a = [0,7,14,31,61,96,131]
+        a=[0,5.9575,13.9575,31.1,61.1,96.1,131.1] #wtf
         #a = [0, 26.776465730086503, 61, 96, 131] #this is the best i've found so far, cost = 1717 NOTE 131.0833333 litres rounded down to 131 in final position
-
         print(a)
-        print(calcExpenditure4(a))
-        #print(calcExpenditure5(a))
+        print(calcExpenditure5(a))
+        #costs.append(calcExpenditure5(a))
+
+
+
 
 main()

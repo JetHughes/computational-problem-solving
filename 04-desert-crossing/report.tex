@@ -4,6 +4,8 @@
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 
 \lstset{frame=tb,
   language=Python,
@@ -89,7 +91,15 @@ Now we are left with two questions: How many fuel depot's should we use between 
 \newline\newline
 For $d = 2413, c = 140, m = 12$, this gives us $(a_n) = (0, 14.417, 61.083)$. 
 \newline\newline
-
+So we cross the desert as follows:
+\newline
+\begin{enumerate}
+    \item Start with a full tank (+140L) go 14.137 litres outs, drop $3*14.137$ litres and return. Arrive back at base with 69.315 litres.
+    \item Refuel (+70.685) go 14.137 litres, fuel up 14.137 litres, drive a further 46.666 litres out to 61.083 litres, drop 46.666 litres, drive back to 14.137 litres, we're empty at this point, so pick up 14.137 litres and drive back to base.
+    \item Refuel (+140), drive 14.137 litres out, pick up all the remaining 14.137 litres so we have a full tank again. Drive to 61.083 litres, pick up the 46.666 litres there so we have a full tank again. Drive all the way to the end of the desert.
+\end{enumerate}
+The total expenditure for this trip is 140 + 70.685 + 140 = 350.685 litres
+\newpage
 
 \question Describe a procedure whereby you could cross the desert and return in the vehicle using the minimum amount of fuel.
 \newline\newline
@@ -123,19 +133,19 @@ trips from depot $a_{n-2}$ in order to drop of enough fuel, but we also will pas
 \newline\end{center}
 litres of fuel at depot $a_{n-2}$. 
 \newline\newline
-We can express the logic above more concisely by iteratively defining a sequences $(r_n)$, for the required fuel at each depot, and $(t_n)$ for the number of trips from each depot. Then with initial conditions $r_0 = 2*d(a_n, a_{n-1})$ and $t_0 = \frac{2*d(a_n, a_{n-1})}{min(80, c - 2*d(a_n, a_{n-1})}$. 
+We can express the logic above more concisely by iteratively defining a sequences $(r_{n\in\N})$, for the required fuel at each depot, and $(t_{n\in\N})$ for the number of trips from each depot. Then with initial conditions $r_0 = 2*d(a_n, a_{n-1})$ and $t_0 = \frac{2*d(a_n, a_{n-1})}{min(80, c - 2*d(a_n, a_{n-1})}$. 
 \newline\begin{center}
 \large$r_i = d(a_{n-(i+1)}, a_{n-i})(2(\sum_{k=0}^{i-1}t_k)+2)$\newline\newline
-\large$t_i = \frac{r_i}{min(80,c-2*d(a_{n-i},a_{n-(i+1)})}$\newline
+\large$t_i = \frac{r_i}{min(80,c-2*d(a_{n-i},a_{n-(i+1)})}$ rounded strictly up to nearest whole number\newline
 \end{center}
-Then we obtain a general formula for expenditure:
+Note that the length of the $(r)$ and $(t)$ will end up being one less than the length of $(a)$. We obtain a general formula for expenditure where n is the length of the array $(a)$:
 \begin{center}
-\large $E = \sum_{i=0}^{n}c*t_i$
+\large $E = c + \sum_{i=0}^{n-1}[t_i*d(a_{n-i},a_{n-(i+1)}) + r_i]$
 \end{center}
 Finally, we can codify this in the following method:
 
 \begin{lstlisting}
-def calcExpenditure5(a):
+def calcExpenditure5(a, c):
     """
     calculating the expenditure given an array of fuel drop locations for round trip.
 
@@ -153,7 +163,7 @@ def calcExpenditure5(a):
         distance = a[j] - a[j-1]
 
         #if the distance between the points is greater than half of the fuel tank, we can't make it, so return FAIL
-        if(distance*2 > 140):
+        if(distance*2 > c):
             return "FAIL"
 
         if j == n-1:  #first case for the last drop
@@ -162,14 +172,14 @@ def calcExpenditure5(a):
             required = (numTrips*2+2)*distance  #this will be the numTrips from the prior iteration.
 
         
-        thisTrip = math.ceil(required/min(80, (140-2*distance)))    #how many trips does it take to drop the required amount of fuel at the spot, we can drop max of 80L, hence the min function?
+        thisTrip = math.ceil(required/min(80, (c-2*distance)))    #how many trips does it take to drop the required amount of fuel at the spot, we can drop max of 80L, hence the min function?
         numTrips += thisTrip    #we need enough fuel not only to drop the fuel at the next spot, but also for any trips beyond that from drop sites further up the chain, so need numtrips to be accumulative
         
         #building array to show cost at each step of the journey.
         tripcost.append(thisTrip*2*distance + required)
 
 
-    return sum(tripcost)
+    return (sum(tripcost) + c)
 
 \end{lstlisting}
 \newline
@@ -197,8 +207,23 @@ Which has been codifed in the function below:
     return a
 
 \end{lstlisting}
-Running this program with the input parameters in the question $(d=2413, c=140, m=12)$, we obtain the points $a = [0, 26.083, 61.083, 96.083, 131.083]$. Running the cost calculating algorithm specified earlier, we find that the expenditure of this set of points (given the standard procedure outlined earlier) is 1710.333 litres.
-
+Running this program with the input parameters in the question $(d=2413, c=140, m=12)$, we obtain the points $a = [0, 26.083, 61.083, 96.083, 131.083]$. Running the cost calculating algorithm specified earlier, we find that the expenditure of this set of points (given the standard procedure outlined earlier) is 1850.333 litres. We outline below exactly what this procedure is:
+\newline
+\begin{enumerate}
+    \item Start with 132.2 litres, drive 26.1 litres out, drop 80 litres, come back to base empty
+    \item Repeat 1) 4 more times, so there is now 400 litres stockpiled 26.1 litres into the desert
+    \item Fuel up to 69.5 litres, drive 26.1 litres out, drop 17.3 litres, leaving 417.3 litres, drive back.
+    \item Fuel up to full tank, drive 26.1 litres out, fuel up 26.1 litres so now have full tank again. Drive a further 35 litres to 61.1, drop 70 litres, come back, empty by the time we get to 26.1 litres, so pick up 26.1 litres. Drive back to base
+    \item Repeat 4) 3 more times, leaving a total of 280 litres 61.1 litres into the desert, and 208.5 litres 26.1 litres into the desert.
+    \item Fuel up, drive 26.1 out, fuel up 26.1, drive 35 more to 61.1, fuel up 35 so full tank. Drive 35 more to 96.1, drop 70 litres, come back. Empty by the time we get to 61.1, so fuel up 35, empty when we get to 26.1, so fuel up 26.1. Make it back to base empty.
+    \item Repeat 6), leaving 140 litres 96.1 litres in, 140 litres 61.1 litres in, and 104.1 26.1 litres in.
+    \item Fuel up, drive 26.1 out, fuel up 26.1, drive 35 more to 61.1, fuel up 35 so full tank. Drive 35 more to 96.1, fuel up 35 so full tank, drive 35 more to 131.1, drop 70. Come back, empty by the time we get to 96.1, so fuel up 35, empty by the time we get to 61.1, so fuel up 35, empty when we get to 26.1, so fuel up 26.1. Make it back to base empty. \newline
+    Leaving 52 litres 26.1 litres in, 70 litres 61.1 litres in, 70 litres 96.1 litres in, and 70 litres 131.1 litres in.
+    \item Fuel up, drive all the way there and back.
+\end{enumerate}
+The amount of fuel used is 1850.333 litres.
+\newline\newline
+However, through sheer trial and error with the program, we found that we could beat this with $(a) = [0,5.9575,13.9575,31.1,61.1,96.1,131.1]$, which the program tells us expends 1681.65 litres. We're not sure why this works at all, looking further into it we think it's because this solution has $(r) = [70.0, 139.99999999999997, 240.0, 239.99500000000003, 160.0, 142.98]$, which have the first two as multiples of 70, and the next 3 even multiples of 80, which gives $(t) = [1, 2, 3, 3, 2, 2]$, but we're not really sure why this is so good.
 
 
 
@@ -256,6 +281,11 @@ def f(j):
     #some function
     
 \end{lstlisting}
-Now, we calculate expenditure using the same code as before, and we observe the data for many different functions f(j).
+Now, we calculate expenditure using the same code as before, and we observe the data for many different functions f(j). This data is plotted below, with distance on the x axis and expenditure on the y.
 \newline\newline
+\includegraphics[scale=0.1]{images/graph1.jpg}
+\includegraphics[scale=0.1]{images/graph2.jpg}
+\newline\newline
+We can see that the solution which we proposed as our optimal general solution (grey) is indeed optimal most of the time. However, there are some solutions which appear better for certain distances. For example, the solution distributed with a factor of $e^{\frac{1}{n^2}}$ looks to perform substantially better around $d = 3800km$.
 \end{document}
+
