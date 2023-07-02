@@ -1,3 +1,15 @@
+"""A script to check the format of a list of dates
+
+Uses sys and argparse to write and read data. Uses regex to assist with parsing. 
+Takes date strings from stdin separated by newlines and outputs them in the 
+format 'dd MMM yyyy' or 'INVALID' if the input string is invalid.
+  
+Example Usage: 
+  python date_parser.py
+  python date_parser.py < valid_tests.in
+  cat valid_tests.in | python date_parser.py
+"""
+
 import sys
 import re
 import argparse
@@ -11,6 +23,8 @@ MONTHS = {
   'Jan':1, 'Feb':2, 'Mar':3, 'Apr':4, 'May':5, 'Jun':6, 'Jul':7, 'Aug':8, 'Sep':9, 'Oct':10, 'Nov':11, 'Dec':12,
 }
 MONTH_ABBREVIAION = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+
+# Regex patterns
 SEPARATOR_PATTERN = r'^(\w+)([-/ ])(\w+)(\2)(\w+)$' 
 DAY_MONTH_DIGIT_PATTERN = r'^(0?[0-9]|[0-9]{2})$' 
 YEAR_PATTERN = r'^([0-9]{4}|[0-9]{2})$' # two or four digits
@@ -39,13 +53,13 @@ def valid_day(day_str):
   Must be between 1 and 31 (inclusive)
 
   Args:
-  day_str (str): The day string to validate.
+    day_str (str): The day string to validate.
 
   Returns:
-  int: The integer value of the day.
+    int: The integer value of the day.
 
   Raises:
-  ValueError: If the day string has invalid format or is out of range
+    ValueError: If the day string has invalid format or is out of range
   """
   if not re.match(DAY_MONTH_DIGIT_PATTERN, day_str):
     raise ValueError("Invalid day format")
@@ -60,14 +74,15 @@ def valid_month(month_str):
   Must be between 1 and 12 or be the first three letters of the name of a month
 
   Args:
-  month_str (str): The month string to validate.
+    month_str (str): The month string to validate.
 
   Returns:
-  int: The integer value of the month.
+    int: The integer value of the month.
 
   Raises:
-  ValueError: If the month string has invalid format or is out of range
+    ValueError: If the month string has invalid format or is out of range
   """
+
   # Check if the date is given as digits
   if re.match(DAY_MONTH_DIGIT_PATTERN, month_str):
     month = int(month_str)
@@ -91,13 +106,13 @@ def valid_year(year_str):
   that lies between 1950 and 2049
 
   Args:
-  year_str (str): The year string to validate.
+    year_str (str): The year string to validate.
 
   Returns:
-  int: The integer value of the year.
+    int: The integer value of the year.
 
   Raises:
-  ValueError: If the year string has invalid format or is out of range
+    ValueError: If the year string has invalid format or is out of range
   """
   # Check that year is a valid format
   if not re.match(YEAR_PATTERN, year_str):
@@ -120,12 +135,12 @@ def check_date_coherence(day, month, year):
   - the month is short (4, 6, 9, 11) and the day is more than 30
 
   Args:
-  day (int): The day to validate.
-  month (int): The month to validate.
-  year (int): The year to validate.
+    day (int): The day to validate.
+    month (int): The month to validate.
+    year (int): The year to validate.
 
   Raises:
-  ValueError: If the given combination of day, month, and year is not coherent
+    ValueError: If the given combination of day, month, and year is not coherent
   """
   # Check that the day and the month and year together are valid
   if month == 2 and day > 29:
